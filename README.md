@@ -1,5 +1,7 @@
 # -VcN-cmd-calculator
 -vcn is -V cmd/calculator nord, opensource java project(you can tipe me in discord in my github profile!)
+download:
+https://github.com/WindyBindy/-VcN-cmd-calculator/raw/refs/heads/main/vcn.jar
 
 # docs version 1.0
 to run -vcn you must have java 21 or sooner versions
@@ -21,4 +23,5 @@ is for :<br/>
 -q --      to quit application<br/>
 neofetch<br/>
 
-the first version will be on github soon as posible!
+download:
+https://github.com/WindyBindy/-VcN-cmd-calculator/raw/refs/heads/main/vcn.jar
