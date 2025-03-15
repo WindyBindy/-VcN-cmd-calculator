@@ -13,12 +13,12 @@ java -jar [name of jar file].jar
 -help
 ```
 is for :<br/>
--help       see all commands<br/>
--v      know version of -Vc<br/>
--calc     make a calculation<br/>
--poc       [beta]colculatorr of power from number<br/>
--webs      url of website of -Vc<br/>
--q      to quit application<br/>
+-help --      see all commands<br/>
+-v --     know version of -Vc<br/>
+-calc --    make a calculation<br/>
+-poc --      [beta]colculatorr of power from number<br/>
+-webs --     url of website of -Vc<br/>
+-q --      to quit application<br/>
 neofetch<br/>
 
 the first version will be on github soon as posible!
