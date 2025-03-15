@@ -4,8 +4,33 @@ import java.lang.management.ManagementFactory;
 import com.sun.management.OperatingSystemMXBean;
 
 public class Main {
-    public static void main(String[] args) {
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    public static void main(String[] args)  throws Exception{
+        String version = "1.1";
+        if (args.length > 0 && (args[0].equals("version") || args[0].equals("v"))) {
+            System.out.println("VCN Calculator v" + version);
+            return;
+        }
+
+        System.out.println("starting VCN Calculator...");
+        String anim= "|/-\\";
+        for (int x =0 ; x < 101 ; x++) {
+            String data = "\r" + anim.charAt(x % anim.length()) + " " + x;
+            System.out.write(data.getBytes());
+            Thread.sleep(8);
+        }
+        System.out.println(" ");
         Scanner scan = new Scanner(System.in);
+        System.out.println("autor - windybindy in github");
         System.out.println("        v                   vv     ccccccccccccc  n         nn\n" +
                 "        v                 vv     cc              n        n n\n" +
                 "        v               vv     cc               n       n  n\n" +
@@ -17,38 +42,74 @@ public class Main {
                 "        v   vv           cc               n n        n\n" +
                 "        v vv             cc              nn         n\n" +
                 "        vv                cccccccccccc  n          n");
-        System.out.println("-Vnordcmdcalculator");
+        System.out.println("-Vcmdnord");
         System.out.println("-help for see commands");
 
         for(int i = 1; i == i; i++){
-            System.out.print("write command>");
+
+            System.out.print(ANSI_GREEN + "write command" + ANSI_RESET + ANSI_BLUE +">"+ ANSI_RESET);
             String command = scan.nextLine();
-            String version = "1.0";
+
             switch (command) {
                 //help command
-                case "-help":
+                case "-help", "h":
                     System.out.println("-help       see all commands\n" +
                             "-v      know version of -Vc\n" +
                             "-calc     make a calculation\n" +
-                            "-poc       [beta]colculatorr of power from number\n" +
+                            "-con       [beta]calculator of power from number\n" +
                             "-webs      url of website of -Vc\n" +
-                            "-q      to quit application\n" +
-                            "neofetch");
+                            "-q    to quit application\n" +
+                            "neofetch\n" +
+                            "-msp       music player on deafalt in standart -vcn music(if you know java lng you can edit all scripts)\n" +
+                            "-fc,f,fc       fastcalculator\n" +
+                            "-tutf      tutorial for fastcalculator");
                     break;
                 //version command
-                case "-v":
+                case "-v", "version", "v", "vcn", "-vcn":
                     System.out.println("-Vcmdcalculator version is:"+version);
                     break;
+                    //fc
+                case "-fc", "f", "fc", "cf", "fastcalc","fastcalculator":
+                    System.out.println("------fast as light!------");
+                    System.out.print( "1num" + ANSI_BLUE + ">" + ANSI_RESET);
+                    float numf1 = scan.nextFloat();
+
+                    System.out.print("2num" + ANSI_BLUE + ">" + ANSI_RESET);
+                    float numf2 = scan.nextFloat();
+
+                    System.out.print("+,-,*,/?" + ANSI_BLUE + ">" + ANSI_RESET);
+                    String atrebut = scan.nextLine();
+                    atrebut = scan.nextLine();
+
+
+                    switch (atrebut){
+                        case "1", "+","p":
+                            System.out.println(numf1 + numf2);
+                            break;
+                        case "2", "-","mm":
+                            System.out.println(numf1 - numf2);
+                            break;
+                        case "3", "*","m":
+                            System.out.println(numf1 * numf2);
+                            break;
+                        case "4", "/","d":
+                            System.out.println(numf1 / numf2);
+                            break;
+                        default:
+                            System.out.println("error of calc");
+                    }
+                    break;
+
                 //calculator
-                case "-calc":
+                case "-calc", "calc", "calculator", "c":
                     System.out.println("------vcncarculator------");
-                    System.out.print("white first number?>");
+                    System.out.print( "white first number?" + ANSI_BLUE + ">" + ANSI_RESET);
                     float num1 = scan.nextFloat();
 
-                    System.out.print("white second number?>");
+                    System.out.print("white second number?" + ANSI_BLUE + ">" + ANSI_RESET);
                     float num2 = scan.nextFloat();
 
-                    System.out.print("+,-,/,*?>");
+                    System.out.print("+,-,/,*?" + ANSI_BLUE + ">" + ANSI_RESET);
                     String atrebut = scan.nextLine();
                     atrebut = scan.nextLine();
 
@@ -72,7 +133,7 @@ public class Main {
                     //end of calculator
                     break;
                 //colculatorr of power from number
-                case "-poc":
+                case "-con", "con", "power-counter", "p", "-p", "power":
                     System.out.println("------vcncarculator------");
                     System.out.print("downnumber(number)>");
                     double base = scan.nextDouble();
@@ -85,7 +146,7 @@ public class Main {
                         result *= base;
                     }
 
-                    // Обработка отрицательных степеней
+
                     if (exponent < 0) {
                         result = 1 / result;
                     }
@@ -93,10 +154,10 @@ public class Main {
                     System.out.println(result);
                     break;
                 //website
-                case "-webs":
-                    System.out.println("w");
+                case "-webs", "website", "w", "docs", "doc":
+                    System.out.println("https://github.com/WindyBindy/-VcN-cmd-calculator");
                     break;
-                case "neofetch":
+                case "neofetch", "nordfetch", "vcnfetch":
                     System.out.println("        v                   vv     ccccccccccccc  n         nn\n" +
                             "        v                 vv     cc              n        n n\n" +
                             "        v               vv     cc               n       n  n\n" +
@@ -118,9 +179,10 @@ public class Main {
 
                     break;
                 //quit
-                case "-q":
+                case "-q", "quit", "q":
                     System.exit(123);
                     break;
+
             }
         }
     }
