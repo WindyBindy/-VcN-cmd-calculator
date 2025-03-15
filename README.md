@@ -21,7 +21,18 @@ is for :<br/>
 -poc --      [beta]colculatorr of power from number<br/>
 -webs --     url of website of -Vc<br/>
 -q --      to quit application<br/>
+-f --    fastcalculator<br/>
 neofetch<br/>
+
+for every commanad have short version like: <br/>
+```
+-calc --- c
+```
+<br/>
+all short version for every command
+
+
+
 
 download:
 https://github.com/WindyBindy/-VcN-cmd-calculator/raw/refs/heads/main/vcn.jar
