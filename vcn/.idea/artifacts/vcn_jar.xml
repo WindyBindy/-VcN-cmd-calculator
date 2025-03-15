@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="vcn:jar">
+    <output-path>$USER_HOME$/Downloads</output-path>
+    <root id="archive" name="vcn.jar">
+      <element id="module-output" name="vcn" />
+    </root>
+  </artifact>
+</component>
