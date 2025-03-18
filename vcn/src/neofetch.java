@@ -24,12 +24,12 @@ public class neofetch {
                                 "        v   vv           cc               n n        n\n" +
                                 "        v vv             cc              nn         n\n" +
                                 "        vv                cccccccccccc  n          n" + ANSI_RESET);
-                        System.out.println("Operating System: " + System.getProperty("os.name"));
+                        System.out.println(ANSI_YELLOW +  "Operating System: " + ANSI_RESET+ System.getProperty("os.name"));
 
-                        System.out.println("Java Version: " + System.getProperty("java.version"));
-                        System.out.println("User Name: " + System.getProperty("user.name"));
+                        System.out.println(ANSI_YELLOW +   "Java Version: " + ANSI_RESET + System.getProperty("java.version"));
+                        System.out.println(ANSI_YELLOW +   "User Name: " + ANSI_RESET + System.getProperty("user.name"));
                         File disk = new File("C:");
-                        System.out.println("Total Disk Space (GB): " + disk.getTotalSpace() / (1024 * 1024 * 1024));
-                        System.out.println("Free Disk Space (GB): " + disk.getFreeSpace() / (1024 * 1024 * 1024));
+                        System.out.println(ANSI_YELLOW +   "Total Disk Space (GB): " + ANSI_RESET + disk.getTotalSpace() / (1024 * 1024 * 1024));
+                        System.out.println(ANSI_YELLOW +   "Free Disk Space (GB): " + ANSI_RESET + disk.getFreeSpace() / (1024 * 1024 * 1024));
     }
 }

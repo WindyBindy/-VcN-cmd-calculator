@@ -1,16 +1,25 @@
 
 
 public class help {
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
     public void vhelp() {
-        System.out.println("-help       see all commands\n" +
-                                "-v      know version of -Vc\n" +
-                                "-calc     make a calcue of -Vc\n" +
-                                "-q    to quit application\n" +
-                                "neofetch\n" +
-                                "-msp       music player on deafalt in standart -vcn music(if you know java lng you can edit all scripts)\n" +
-                                "-fc,f,fc       fastcalcullation\n" +
-                                "-con       [beta]calculator of power from number\n" +
-                                "-webs      url of websitator\n" +
-                                "-tutf      tutorial for fastcalculator");
+        System.out.println( ANSI_CYAN +"-help   " +ANSI_RESET  +    "see all commands\n" +
+                            ANSI_CYAN+"-v   "+ ANSI_RESET   +  "know version of -Vc\n" +
+                            ANSI_CYAN+"-calc    "+ ANSI_RESET  +   "make a calcue of -Vc\n" +
+                            ANSI_CYAN+ "-q  "+ ANSI_RESET  +  "to quit application\n" +
+                            ANSI_CYAN +ANSI_RESET +"neofetch\n" +
+                            ANSI_CYAN + "-msp       " + ANSI_RESET + "music player on deafalt in standart -vcn music(if you know java lng you can edit all scripts)\n" +
+                            ANSI_CYAN+"-fc,f,fc     "+ANSI_RESET   +    "fastcalcullation\n" +
+                            ANSI_CYAN+"-con     "+ANSI_RESET   +    "calculator of power from number\n" +
+                            ANSI_CYAN+"-webs    "+ANSI_RESET   +   "url of websitator\n" +
+                            ANSI_CYAN+"-tutf    "+ANSI_RESET   +   "tutorial for fastcalculator");
     }
 }

@@ -12,14 +12,28 @@ public class Main {
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String PLEANSI_PUR = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-    public static void main(String[] args)  throws Exception{
-        String version = "1.1";
+
+    public static void main(String[] args) throws Exception {
+        
+        String version = "1.2";
         if (args.length > 0 && (args[0].equals("version") || args[0].equals("v"))) {
             System.out.println("VCN Calculator v" + version);
             return;
+        }
+        if (args.length > 0 && (args[0].equals("fastcalculator") || args[0].equals("f") || args[0].equals("fc"))) {
+            fastcalc vfc = new fastcalc();
+                        vfc.vfc();
+            
+                        return;
+        }if (args.length > 0 && (args[0].equals("neofetch") || args[0].equals("neo") || args[0].equals("harak"))) {
+            
+                        neofetch vneofetch = new neofetch();
+                        vneofetch.vneofetch();
+            
+                        return;
         }
 //--------------
 //start of programm
@@ -30,7 +44,7 @@ System.out.println("starting VCN Calculator...");
         progerssbar vbar = new progerssbar();
         vbar.vbar();
         
-        Scanner scan = new Scanner(System.in);
+        
         System.out.println("autor - windybindy in github");
         System.out.println(ANSI_CYAN+"        v                   vv     ccccccccccccc  n         nn\n" +
                 "        v                 vv     cc              n        n n\n" +
@@ -50,6 +64,7 @@ System.out.println("starting VCN Calculator...");
                 //--------------
         try {
             for (; true;) {
+                Scanner scan = new Scanner(System.in);
                 System.out.print(ANSI_GREEN + "write command" + ANSI_RESET + ANSI_BLUE + ">" + ANSI_RESET);
                 String command = scan.nextLine();
                 //--------------
@@ -69,9 +84,9 @@ System.out.println("starting VCN Calculator...");
                     //--------------
                     //progressbaranimation
                     //--------------
-                    case "progressbaranimation", "animation","bar":
-                    vbar.vbar();
-                    break;
+                    case "progressbaranimation", "animation", "bar":
+                        vbar.vbar();
+                        break;
                     //--------------
                     //fc tutorial
                     //--------------
@@ -89,33 +104,8 @@ System.out.println("starting VCN Calculator...");
                     //--------------
                     case "-fc", "f", "fc", "cf", "fastcalc", "fastcalculator", "1", "2", "3", "4", "5", "6", "7", "8",
                             "9", "10":
-                        System.out.println("------fast as light!------");
-                        System.out.print("1num" + ANSI_BLUE + ">" + ANSI_RESET);
-                        float numf1 = scan.nextFloat();
-
-                        System.out.print("2num" + ANSI_BLUE + ">" + ANSI_RESET);
-                        float numf2 = scan.nextFloat();
-
-                        System.out.print("+,-,*,/?" + ANSI_BLUE + ">" + ANSI_RESET);
-                        String atrebutf = scan.nextLine();
-                        atrebutf = scan.nextLine();
-
-                        switch (atrebutf) {
-                            case "1", "+", "p":
-                                System.out.println(numf1 + numf2);
-                                break;
-                            case "2", "-", "mm":
-                                System.out.println(numf1 - numf2);
-                                break;
-                            case "3", "*", "m":
-                                System.out.println(numf1 * numf2);
-                                break;
-                            case "4", "/", "d":
-                                System.out.println(numf1 / numf2);
-                                break;
-                            default:
-                                System.out.println("error of calc");
-                        }
+                        fastcalc vfc = new fastcalc();
+                        vfc.vfc();
                         break;
                     //--------------
                     //calculator
@@ -155,10 +145,10 @@ System.out.println("starting VCN Calculator...");
                     //--------------
                     case "-con", "con", "power-counter", "p", "-p", "power":
                         System.out.println("------vcncarculator------");
-                        System.out.print("downnumber(number)" + ANSI_BLUE + ">" + ANSI_RESET);
+                        System.out.print( ANSI_YELLOW + "downnumber(number)" + ANSI_BLUE + ">" + ANSI_RESET);
                         double base = scan.nextDouble();
 
-                        System.out.print("upnumber(power)" + ANSI_BLUE + ">" + ANSI_RESET);
+                        System.out.print(ANSI_YELLOW + "upnumber(power)" + ANSI_BLUE + ">" + ANSI_RESET);
                         int exponent = scan.nextInt();
 
                         double result = 1;
@@ -170,7 +160,7 @@ System.out.println("starting VCN Calculator...");
                             result = 1 / result;
                         }
 
-                        System.out.println(result);
+                        System.out.println(ANSI_GREEN + result + ANSI_RESET);
                         break;
                     //--------------
                     //website
@@ -197,6 +187,7 @@ System.out.println("starting VCN Calculator...");
                 }
             }
             
+            
             //errors
         } catch (NumberFormatException e) {
             System.out.println("⚠error of type!");
@@ -205,5 +196,7 @@ System.out.println("starting VCN Calculator...");
         } catch (Exception e) {
             System.out.println("⚠error of type!");
         }
+        
     }
+    
 }
