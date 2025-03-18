@@ -84,6 +84,7 @@ First u write a number and then power of number.
 
 
 # download:
+you must have or use vcn in WINDOWS TERMINAL in microsoft store "that is for using colors"
 https://github.com/WindyBindy/-VcN-cmd-calculator/raw/refs/heads/main/vcn.jar<br/>
 (to see faster updates u can clone github reposetory and u must run  `vcn\src\Main.java`)<br/>
 also you can make in `C:` a folder that named ```script``` and than make in this folder a `vcn.txt` and put that file:<br/>
