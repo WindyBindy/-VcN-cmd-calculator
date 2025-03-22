@@ -16,10 +16,11 @@ public class help {
                             ANSI_CYAN+"-calc    "+ ANSI_RESET  +   "make a calcue of -Vc\n" +
                             ANSI_CYAN+ "-q  "+ ANSI_RESET  +  "to quit application\n" +
                             ANSI_CYAN +ANSI_RESET +"neofetch\n" +
-                            ANSI_CYAN + "-msp       " + ANSI_RESET + "music player on deafalt in standart -vcn music(if you know java lng you can edit all scripts)\n" +
                             ANSI_CYAN+"-fc,f,fc     "+ANSI_RESET   +    "fastcalcullation\n" +
                             ANSI_CYAN+"-con     "+ANSI_RESET   +    "calculator of power from number\n" +
                             ANSI_CYAN+"-webs    "+ANSI_RESET   +   "url of websitator\n" +
-                            ANSI_CYAN+"-tutf    "+ANSI_RESET   +   "tutorial for fastcalculator");
+                ANSI_CYAN + "-tutf    " + ANSI_RESET + "tutorial for fastcalculator\n" +
+                ANSI_CYAN + "search     "+ANSI_RESET+"google search\n"+
+                ANSI_CYAN + "search url     "+ANSI_RESET+"url search like https://www."+ANSI_BLUE+"WEBSITE"+ANSI_RESET+".com");
     }
 }

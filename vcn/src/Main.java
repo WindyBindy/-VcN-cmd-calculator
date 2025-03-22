@@ -28,10 +28,19 @@ public class Main {
                         vfc.vfc();
             
                         return;
-        }if (args.length > 0 && (args[0].equals("neofetch") || args[0].equals("neo") || args[0].equals("harak"))) {
-            
+                    }
+                    if (args.length > 0
+                            && (args[0].equals("neofetch") || args[0].equals("neo") || args[0].equals("harak"))) {
+
                         neofetch vneofetch = new neofetch();
                         vneofetch.vneofetch();
+
+                        return;
+                    }
+        if (args.length > 0 && (args[0].equals("search") || args[0].equals("google") || args[0].equals("se"))) {
+            
+                        search vsearch = new search();
+                    vsearch.vsearch();
             
                         return;
         }
@@ -176,6 +185,20 @@ System.out.println("starting VCN Calculator...");
                         vneofetch.vneofetch();
                         break;
                     //--------------
+                    //google search
+                    //--------------
+                    case "search-google", "sg", "search":
+                    search vsearch = new search();
+                    vsearch.vsearch();
+                    break;
+                    //--------------
+                    //url search
+                    //--------------
+                    case "search-url", "searchwebsite", "su":
+                    searchurl vsearchurl = new searchurl();
+                    vsearchurl.vsearchurl();
+                    break;
+                    //--------------
                     //quit
                     //--------------
                     case "-q", "quit", "q":
@@ -183,6 +206,8 @@ System.out.println("starting VCN Calculator...");
                         vquit.vquit();
                         scan.close();
                         break;
+
+                    
 
                 }
             }
