@@ -101,3 +101,15 @@ setx PATH "%PATH%;C:\scripts"
 ```
 <br/>
 than you have posibility to start -Vcn with command `vcn`, and you can check vcn version also with command `vcn v`, vcn v command you must not make settings because in java file and in jar file thar is one script
+
+
+### VCN-Velocity Console Nord
+This is VCN2, I make a design of vcn2. The vcn2 console is like linux or git syntax.
+```
+__     __   _            _ _            ____                      _        _   _               _ 
+\ \   / /__| | ___   ___(_) |_ _   _   / ___|___  _ __  ___  ___ | | ___  | \ | | ___  _ __ __| |
+ \ \ / / _ \ |/ _ \ / __| | __| | | | | |   / _ \| '_ \/ __|/ _ \| |/ _ \ |  \| |/ _ \| '__/ _` |
+  \ V /  __/ | (_) | (__| | |_| |_| | | |__| (_) | | | \__ \ (_) | |  __/ | |\  | (_) | | | (_| |
+   \_/ \___|_|\___/ \___|_|\__|\__, |  \____\___/|_| |_|___/\___/|_|\___| |_| \_|\___/|_|  \__,_|
+                               |___/
+```
